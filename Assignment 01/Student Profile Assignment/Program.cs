@@ -11,6 +11,8 @@ namespace Student_Profile_Assignment
     {
         static void Main(string[] args)
         {
+            Form1 f1 = new Form1();
+            f1.Show();
             
             string path;
             if (args.Count() != 0)
