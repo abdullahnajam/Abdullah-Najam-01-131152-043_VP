@@ -77,6 +77,7 @@
             this.viewAttendence.TabIndex = 5;
             this.viewAttendence.Text = "View Attendence";
             this.viewAttendence.UseVisualStyleBackColor = true;
+            this.viewAttendence.Click += new System.EventHandler(this.viewAttendence_Click);
             // 
             // markAttendence
             // 

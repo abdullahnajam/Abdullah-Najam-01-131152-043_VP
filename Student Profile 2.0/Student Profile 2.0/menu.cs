@@ -86,5 +86,12 @@ namespace Student_Profile_2._0
             obj.Show();
             this.Hide();
         }
+
+        private void viewAttendence_Click(object sender, EventArgs e)
+        {
+            View_Attendence obj = new View_Attendence();
+            obj.Show();
+            this.Hide();
+        }
     }
 }

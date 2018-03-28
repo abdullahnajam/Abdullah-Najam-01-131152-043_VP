@@ -144,6 +144,9 @@
     <EmbeddedResource Include="top3gpa.resx">
       <DependentUpon>top3gpa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View Attendence.resx">
+      <DependentUpon>View Attendence.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

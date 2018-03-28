@@ -18,11 +18,10 @@ namespace Student_Profile_2._0
             InitializeComponent();
         }
         FileSelect fs = new FileSelect();
-        public void dummy()
-        {
-            
-        }
-
+        
+        CheckBox[] radio;
+        Label [] idLabel;
+        Label[] nameLabel;
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             
@@ -38,7 +37,8 @@ namespace Student_Profile_2._0
             
             string[] store_data = new String[7];
             string line;
-            int count = 0, inc = 0;
+            int inc = 0,count=0;
+             
             using (StreamReader r = new StreamReader(fs.path))
             {
                 while ((line = r.ReadLine()) != null)
@@ -48,9 +48,9 @@ namespace Student_Profile_2._0
 
             }
             string[] storeRecord = new String[count];
-            RadioButton[] radio = new RadioButton[count/7];
-            Label[] idLabel = new Label[count / 7];
-            Label[] nameLabel = new Label[count / 7];
+            radio= new CheckBox[count];
+            idLabel = new Label[count];
+            nameLabel = new Label[count];
             using (StreamReader r = new StreamReader(fs.path))
             {
                 
@@ -74,19 +74,74 @@ namespace Student_Profile_2._0
                         
                         idLabel[i] = new Label();
                         idLabel[i].Size = new Size(61, 17);
-                        idLabel[i].Location = new Point(22 + (i * 10), 121 + (i * 10));
+                        idLabel[i].Location = new Point(22 , 90 + (i * 5));
                         idLabel[i].Show();
                         nameLabel[i] = new Label();
                         nameLabel[i].Size = new Size(35, 13);
-                        nameLabel[i].Location = new Point(98 + (i * 10), 121 + (i * 10));
+                        nameLabel[i].Location = new Point(98 , 90 + (i * 5));
                         nameLabel[i].Show();
-                        radio[i] = new RadioButton();
-                        radio[i].Size = new Size(35, 13);
-                        radio[i].Location = new Point(178 + (i * 10), 121 + (i * 10));
+                        radio[i] = new CheckBox();
+                        radio[i].Size = new Size(65, 17);
+                        radio[i].Location = new Point(178 , 90 + (i * 5));
                         radio[i].Show();
                         idLabel[i].Text = store_data[0];
                         nameLabel[i].Text = store_data[1];
+                        radio[i].Text = "Present";
+                        this.Controls.Add(radio[i]);
+                        this.Controls.Add(idLabel[i]);
+                        this.Controls.Add(nameLabel[i]);
 
+
+
+                    }
+                }
+            }
+            
+        }
+
+        private void markButton_Click(object sender, EventArgs e)
+        {
+
+            string[] store_data = new String[7];
+            string line;
+            int inc = 0, count = 0;
+
+            using (StreamReader r = new StreamReader(fs.path))
+            {
+                while ((line = r.ReadLine()) != null)
+                {
+                    count++;
+                }
+
+            }
+            string[] storeRecord = new String[count];
+            using (StreamReader r = new StreamReader(fs.path))
+            {
+
+                for (int i = 0; i < count; i++)
+                {
+                    storeRecord[i] = r.ReadLine();
+                }
+
+                for (int i = 0; i < storeRecord.Length; i++)
+                {
+
+                    inc = i;
+                    for (int j = 0; j < 7; j++)
+                    {
+                        store_data[j] = storeRecord[i];
+                        i++;
+                    }
+                    i--;
+                    if (store_data[2] == semfield.Text)
+                    {
+
+                        if(radio[i].Checked)
+                        {
+                            storeRecord[i] = "Present";
+                        }
+                        else
+                            storeRecord[i] = "Absent";
 
 
                     }
@@ -101,33 +156,7 @@ namespace Student_Profile_2._0
                 }
 
             }
-        }
-
-        private void markButton_Click(object sender, EventArgs e)
-        {
-            //RadioButton[] radio = new RadioButton[3];
-            //Label[] idLabel = new Label[3];
-            //Label[] nameLabel = new Label[3];
-            //for(int i=0;i<3;i++)
-            //{
-            //    idLabel[i] = new Label();
-            //    idLabel[i].Size = new Size(61, 17);
-            //    idLabel[i].Location = new Point(22, 121 + (i * 20));
-            //    idLabel[i].Text = "asdasd";
-            //    //idLabel[i].Show();
-            //    nameLabel[i] = new Label();
-            //    nameLabel[i].Size = new Size(35, 13);
-            //    nameLabel[i].Location = new Point(98 + (i * 10), 121 + (i * 10));
-            //    nameLabel[i].Show();
-            //    radio[i] = new RadioButton();
-            //    radio[i].Size = new Size(35, 13);
-            //    radio[i].Location = new Point(178 + (i * 10), 121 + (i * 10));
-            //    radio[i].Text = "asd";
-            //    radio[i].Show();
-            //    this.Controls.Add(radio[i]);
-            //    this.Controls.Add(idLabel[i]);
-            //}
-            
+            MessageBox.Show("Attendence is Marked");
         }
     }
 }
