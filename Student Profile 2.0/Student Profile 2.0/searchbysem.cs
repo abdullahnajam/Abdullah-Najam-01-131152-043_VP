@@ -18,7 +18,7 @@ namespace Student_Profile_2._0
             InitializeComponent();
         }
         string[] storeHead = { "ID : ", "Name : ", "Semester : ", "CGPA : ", "Department : ", "University : " };
-        string path = "data.txt";
+        string path = @"..\..\data.txt";
         private void Searchbt_Click(object sender, EventArgs e)
         {
             if(semlist.Text!=null)

@@ -17,7 +17,7 @@ namespace Student_Profile_2._0
         {
             InitializeComponent();
         }
-        string path = "data.txt";
+        string path = @"..\..\data.txt";
         private void View_Attendence_Load(object sender, EventArgs e)
         {
             

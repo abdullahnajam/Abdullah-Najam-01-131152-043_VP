@@ -17,28 +17,73 @@ namespace Student_Profile_2._0
         {
             InitializeComponent();
         }
-        string path = "data.txt";
-        private void createRecord_Click(object sender, EventArgs e)
+        string path = @"..\..\data.txt";
+        public bool searchID()
         {
-            try
+            string[] store_data = new String[7]; bool rtype = false;
+            using (StreamReader r = new StreamReader(path))
             {
-                using (StreamWriter write = File.AppendText(path))
+                while (!r.EndOfStream)
                 {
-                    write.WriteLine(idfield.Text);
-                    write.WriteLine(namefield.Text);
-                    write.WriteLine(semfield.Text);
-                    write.WriteLine(gpafield.Text);
-                    write.WriteLine(deptfield.Text);
-                    write.WriteLine(unifield.Text);
-                    write.WriteLine("f");
+                    for (int i = 0; i < 7; i++)
+                    {
+                        store_data[i] = r.ReadLine();
+                    }
 
+
+                    if (store_data[0] == idfield.Text)
+                    {
+                        rtype = true;
+
+                        break;
+                    }
+                    else
+                    {
+                        for (int i = 0; i < 7; i++)
+                        {
+                            store_data[i] = null;
+                        }
+                    }
                 }
             }
-            catch
+
+            return rtype;
+        }
+        private void createRecord_Click(object sender, EventArgs e)
+        {
+            if (searchID() == false)
             {
-                Console.WriteLine("File not found");
-                File.Create(path);
+                if (idfield.Text != "" && namefield.Text != "" && semfield.Text != "" && gpafield.Text != "" && deptfield.Text != "" && unifield.Text != "")
+                {
+                    try
+                    {
+                        using (StreamWriter write = File.AppendText(path))
+                        {
+                            write.WriteLine(idfield.Text);
+                            write.WriteLine(namefield.Text);
+                            write.WriteLine(semfield.Text);
+                            write.WriteLine(gpafield.Text);
+                            write.WriteLine(deptfield.Text);
+                            write.WriteLine(unifield.Text);
+                            write.WriteLine("Absent");
+                            MessageBox.Show("Record Created");
+
+
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("File not found");
+                        File.Create(path);
+                    }
+                }
+                else
+                    MessageBox.Show("A textfield is Empty");
             }
+            else
+                MessageBox.Show("Student already exists in record");
+            
+            
             
         }
 

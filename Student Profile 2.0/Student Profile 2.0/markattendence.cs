@@ -17,7 +17,7 @@ namespace Student_Profile_2._0
         {
             InitializeComponent();
         }
-        string path = "data.txt";
+        string path = @"..\..\data.txt";
 
         CheckBox[] attendenceBox;
         Label [] idLabel;
@@ -34,7 +34,7 @@ namespace Student_Profile_2._0
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(semfield.Text!=null)
+            if(semfield.Text!="")
             {
                 string[] store_data = new String[7];
                 string line;

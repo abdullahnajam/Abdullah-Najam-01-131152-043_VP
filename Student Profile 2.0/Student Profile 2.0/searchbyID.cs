@@ -18,12 +18,12 @@ namespace Student_Profile_2._0
             InitializeComponent();
         }
         string[] storeHead = { "ID : ", "Name : ", "Semester : ", "CGPA : ", "Department : ", "University : " };
-        string path = "data.txt";
+        string path = @"..\..\data.txt";
         private void idfield_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode==Keys.Enter)
             {
-                if (idfield.Text != null)
+                if (idfield.Text != "")
                 {
                     string[] store_data = new String[7];
                     using (StreamReader r = new StreamReader(path))
@@ -62,7 +62,7 @@ namespace Student_Profile_2._0
 
         private void searchid_Click(object sender, EventArgs e)
         {
-            if (idfield.Text != null)
+            if (idfield.Text != "")
             {
                 string[] store_data = new String[7];
                 using (StreamReader r = new StreamReader(path))
@@ -97,7 +97,7 @@ namespace Student_Profile_2._0
                 MessageBox.Show("Textfield is Empty");
             
         }
-
+        
         private void searchbyID_Load(object sender, EventArgs e)
         {
 

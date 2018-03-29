@@ -17,11 +17,14 @@ namespace Student_Profile_2._0
         {
             InitializeComponent();
         }
-        string path = "data.txt";
+        string path = @"..\..\data.txt";
+        
         private void Delete_Click(object sender, EventArgs e)
         {
-            if(deletefield.Text!=null)
+            if(deletefield.Text!="")
             {
+                //FileInfo f = new FileInfo(path);
+                //f.IsReadOnly = false;
                 string line;
                 int count = 0;
                 StreamReader r = new StreamReader(path);
@@ -52,6 +55,7 @@ namespace Student_Profile_2._0
                     {
                         write.WriteLine(store_data[i]);
                     }
+                    write.AutoFlush = true;
                 }
                 MessageBox.Show("Record Deleted");
             }

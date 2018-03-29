@@ -1,18 +1,17 @@
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\bin\Debug\Student Profile 2.0.exe.config
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\bin\Debug\Student Profile 2.0.exe
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\bin\Debug\Student Profile 2.0.pdb
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.csprojResolveAssemblyReference.cache
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.Properties.Resources.resources
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.csproj.GenerateResource.Cache
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.exe
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.pdb
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.menu.resources
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.searchbyID.resources
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.searchbysem.resources
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.SearchNAme.resources
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.Create.resources
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.DeleteRecord.resources
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.top3gpa.resources
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.markattendence.resources
-C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.View_Attendence.resources
 C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\bin\Debug\data.txt
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\bin\Debug\Student Profile 2.0.exe.config
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\bin\Debug\Student Profile 2.0.exe
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\bin\Debug\Student Profile 2.0.pdb
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.Create.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.DeleteRecord.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.markattendence.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.menu.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.Properties.Resources.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.SearchNAme.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.searchbyID.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.searchbysem.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.top3gpa.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.View_Attendence.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.csproj.GenerateResource.Cache
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.exe
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.pdb
