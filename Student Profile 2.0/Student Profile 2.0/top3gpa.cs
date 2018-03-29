@@ -17,12 +17,12 @@ namespace Student_Profile_2._0
         {
             InitializeComponent();
         }
-        FileSelect fs = new FileSelect();
+        string path = "data.txt";
         public int recordlist()
         {
             string line;
             int count = 0;
-            using (StreamReader r = new StreamReader(fs.path))
+            using (StreamReader r = new StreamReader(path))
             {
                 while ((line = r.ReadLine()) != null)
                 {
@@ -38,7 +38,7 @@ namespace Student_Profile_2._0
             string[] store_data = new String[recordlist()];
             string line;
             int j = 0;
-            using (StreamReader r = new StreamReader(fs.path))
+            using (StreamReader r = new StreamReader(path))
             {
                 while ((line = r.ReadLine()) != null)
                 {
@@ -66,6 +66,13 @@ namespace Student_Profile_2._0
                 }
             }
                 
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            menu obj = new menu();
+            obj.Show();
+            this.Dispose();
         }
     }
 }

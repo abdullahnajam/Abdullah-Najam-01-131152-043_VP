@@ -41,46 +41,50 @@
             this.depttxt = new System.Windows.Forms.Label();
             this.unitxt = new System.Windows.Forms.Label();
             this.createRecord = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // idfield
             // 
-            this.idfield.Location = new System.Drawing.Point(118, 24);
+            this.idfield.Location = new System.Drawing.Point(388, 236);
             this.idfield.Name = "idfield";
             this.idfield.Size = new System.Drawing.Size(100, 20);
             this.idfield.TabIndex = 0;
             // 
             // deptfield
             // 
-            this.deptfield.Location = new System.Drawing.Point(118, 128);
+            this.deptfield.Location = new System.Drawing.Point(388, 340);
             this.deptfield.Name = "deptfield";
             this.deptfield.Size = new System.Drawing.Size(100, 20);
-            this.deptfield.TabIndex = 1;
+            this.deptfield.TabIndex = 4;
             // 
             // gpafield
             // 
-            this.gpafield.Location = new System.Drawing.Point(118, 102);
+            this.gpafield.Location = new System.Drawing.Point(388, 314);
             this.gpafield.Name = "gpafield";
             this.gpafield.Size = new System.Drawing.Size(100, 20);
-            this.gpafield.TabIndex = 2;
+            this.gpafield.TabIndex = 3;
             // 
             // semfield
             // 
-            this.semfield.Location = new System.Drawing.Point(118, 76);
+            this.semfield.Location = new System.Drawing.Point(388, 288);
             this.semfield.Name = "semfield";
             this.semfield.Size = new System.Drawing.Size(100, 20);
-            this.semfield.TabIndex = 3;
+            this.semfield.TabIndex = 2;
             // 
             // namefield
             // 
-            this.namefield.Location = new System.Drawing.Point(118, 50);
+            this.namefield.Location = new System.Drawing.Point(388, 262);
             this.namefield.Name = "namefield";
             this.namefield.Size = new System.Drawing.Size(100, 20);
-            this.namefield.TabIndex = 4;
+            this.namefield.TabIndex = 1;
             // 
             // unifield
             // 
-            this.unifield.Location = new System.Drawing.Point(118, 154);
+            this.unifield.Location = new System.Drawing.Point(388, 366);
             this.unifield.Name = "unifield";
             this.unifield.Size = new System.Drawing.Size(100, 20);
             this.unifield.TabIndex = 5;
@@ -88,7 +92,7 @@
             // idtxt
             // 
             this.idtxt.AutoSize = true;
-            this.idtxt.Location = new System.Drawing.Point(33, 27);
+            this.idtxt.Location = new System.Drawing.Point(303, 239);
             this.idtxt.Name = "idtxt";
             this.idtxt.Size = new System.Drawing.Size(18, 13);
             this.idtxt.TabIndex = 6;
@@ -97,7 +101,7 @@
             // nametxt
             // 
             this.nametxt.AutoSize = true;
-            this.nametxt.Location = new System.Drawing.Point(33, 53);
+            this.nametxt.Location = new System.Drawing.Point(303, 265);
             this.nametxt.Name = "nametxt";
             this.nametxt.Size = new System.Drawing.Size(35, 13);
             this.nametxt.TabIndex = 7;
@@ -106,7 +110,7 @@
             // semtxt
             // 
             this.semtxt.AutoSize = true;
-            this.semtxt.Location = new System.Drawing.Point(33, 79);
+            this.semtxt.Location = new System.Drawing.Point(303, 291);
             this.semtxt.Name = "semtxt";
             this.semtxt.Size = new System.Drawing.Size(51, 13);
             this.semtxt.TabIndex = 8;
@@ -115,7 +119,7 @@
             // gpatxt
             // 
             this.gpatxt.AutoSize = true;
-            this.gpatxt.Location = new System.Drawing.Point(33, 105);
+            this.gpatxt.Location = new System.Drawing.Point(303, 317);
             this.gpatxt.Name = "gpatxt";
             this.gpatxt.Size = new System.Drawing.Size(36, 13);
             this.gpatxt.TabIndex = 9;
@@ -124,7 +128,7 @@
             // depttxt
             // 
             this.depttxt.AutoSize = true;
-            this.depttxt.Location = new System.Drawing.Point(33, 131);
+            this.depttxt.Location = new System.Drawing.Point(303, 343);
             this.depttxt.Name = "depttxt";
             this.depttxt.Size = new System.Drawing.Size(62, 13);
             this.depttxt.TabIndex = 10;
@@ -133,7 +137,7 @@
             // unitxt
             // 
             this.unitxt.AutoSize = true;
-            this.unitxt.Location = new System.Drawing.Point(33, 157);
+            this.unitxt.Location = new System.Drawing.Point(303, 369);
             this.unitxt.Name = "unitxt";
             this.unitxt.Size = new System.Drawing.Size(53, 13);
             this.unitxt.TabIndex = 11;
@@ -141,19 +145,51 @@
             // 
             // createRecord
             // 
-            this.createRecord.Location = new System.Drawing.Point(95, 211);
+            this.createRecord.Location = new System.Drawing.Point(331, 445);
             this.createRecord.Name = "createRecord";
-            this.createRecord.Size = new System.Drawing.Size(75, 23);
-            this.createRecord.TabIndex = 12;
+            this.createRecord.Size = new System.Drawing.Size(110, 60);
+            this.createRecord.TabIndex = 6;
             this.createRecord.Text = "Create";
             this.createRecord.UseVisualStyleBackColor = true;
             this.createRecord.Click += new System.EventHandler(this.createRecord_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Student_Profile_2._0.Properties.Resources.student_profile;
+            this.pictureBox1.Location = new System.Drawing.Point(212, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(369, 109);
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(226, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(332, 37);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Please Fill The Form";
+            // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(668, 494);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(117, 59);
+            this.backButton.TabIndex = 16;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
             // Create
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(797, 565);
+            this.Controls.Add(this.backButton);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.createRecord);
             this.Controls.Add(this.unitxt);
             this.Controls.Add(this.depttxt);
@@ -168,7 +204,9 @@
             this.Controls.Add(this.deptfield);
             this.Controls.Add(this.idfield);
             this.Name = "Create";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +227,8 @@
         private System.Windows.Forms.Label depttxt;
         private System.Windows.Forms.Label unitxt;
         private System.Windows.Forms.Button createRecord;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button backButton;
     }
 }

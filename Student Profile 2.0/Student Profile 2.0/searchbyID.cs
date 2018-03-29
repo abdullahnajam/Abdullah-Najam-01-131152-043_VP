@@ -18,13 +18,54 @@ namespace Student_Profile_2._0
             InitializeComponent();
         }
         string[] storeHead = { "ID : ", "Name : ", "Semester : ", "CGPA : ", "Department : ", "University : " };
-        FileSelect fs = new FileSelect();
+        string path = "data.txt";
         private void idfield_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode==Keys.Enter)
             {
+                if (idfield.Text != null)
+                {
+                    string[] store_data = new String[7];
+                    using (StreamReader r = new StreamReader(path))
+                    {
+                        while (!r.EndOfStream)
+                        {
+                            for (int i = 0; i < 7; i++)
+                            {
+                                store_data[i] = r.ReadLine();
+                            }
+
+
+                            if (store_data[0] == idfield.Text)
+                            {
+                                for (int i = 0; i < 6; i++)
+                                {
+                                    IDlist.Items.Add(storeHead[i] + store_data[i]);
+                                }
+                                break;
+                            }
+                            else
+                            {
+                                for (int i = 0; i < 7; i++)
+                                {
+                                    store_data[i] = null;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                    MessageBox.Show("Textfield is Empty");
+                
+            }
+        }
+
+        private void searchid_Click(object sender, EventArgs e)
+        {
+            if (idfield.Text != null)
+            {
                 string[] store_data = new String[7];
-                using (StreamReader r = new StreamReader(fs.path))
+                using (StreamReader r = new StreamReader(path))
                 {
                     while (!r.EndOfStream)
                     {
@@ -52,38 +93,21 @@ namespace Student_Profile_2._0
                     }
                 }
             }
+            else
+                MessageBox.Show("Textfield is Empty");
+            
         }
 
-        private void searchid_Click(object sender, EventArgs e)
+        private void searchbyID_Load(object sender, EventArgs e)
         {
-            string[] store_data = new String[7];
-            using (StreamReader r = new StreamReader(fs.path))
-            {
-                while (!r.EndOfStream)
-                {
-                    for (int i = 0; i < 7; i++)
-                    {
-                        store_data[i] = r.ReadLine();
-                    }
 
+        }
 
-                    if (store_data[0] == idfield.Text)
-                    {
-                        for (int i = 0; i < 6; i++)
-                        {
-                            IDlist.Items.Add(storeHead[i] + store_data[i]);
-                        }
-                        break;
-                    }
-                    else
-                    {
-                        for (int i = 0; i < 7; i++)
-                        {
-                            store_data[i] = null;
-                        }
-                    }
-                }
-            }
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            menu obj = new menu();
+            obj.Show();
+            this.Dispose();
         }
     }
 }

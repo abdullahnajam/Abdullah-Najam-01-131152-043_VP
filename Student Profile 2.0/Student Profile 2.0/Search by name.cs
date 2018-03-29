@@ -18,14 +18,14 @@ namespace Student_Profile_2._0
             InitializeComponent();
         }
         string[] storeHead = { "ID : ", "Name : ", "Semester : ", "CGPA : ", "Department : ", "University : " };
-        FileSelect fs = new FileSelect();
+        string path = "data.txt";
         private void enterfield_KeyDown(object sender, KeyEventArgs e)
         {
             
             if(e.KeyCode==Keys.Enter)
             {
                 string[] store_data = new String[7];
-                using (StreamReader r = new StreamReader(fs.path))
+                using (StreamReader r = new StreamReader(path))
                 {
                     while (!r.EndOfStream)
                     {
@@ -59,7 +59,7 @@ namespace Student_Profile_2._0
         private void namefield_TextChanged(object sender, EventArgs e)
         {
             string[] store_data = new String[7];
-            using (StreamReader r = new StreamReader(fs.path))
+            using (StreamReader r = new StreamReader(path))
             {
                 while (!r.EndOfStream)
                 {
@@ -90,6 +90,18 @@ namespace Student_Profile_2._0
         }
 
         private void searchbt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            menu obj = new menu();
+            obj.Show();
+            this.Dispose();
+        }
+
+        private void SearchNAme_Load(object sender, EventArgs e)
         {
 
         }

@@ -17,40 +17,61 @@ namespace Student_Profile_2._0
         {
             InitializeComponent();
         }
-        FileSelect fs = new FileSelect();
+        string path = "data.txt";
         private void Delete_Click(object sender, EventArgs e)
         {
-            string line;
-            int count = 0;
-            StreamReader r = new StreamReader(fs.path);
-            while ((line = r.ReadLine()) != null)
+            if(deletefield.Text!=null)
             {
-                count++;
-            }
-            r.Close();
-            r = new StreamReader(fs.path);
-            string[] store_data = new String[count];
-            for (int i = 0; i < count; i++)
-            {
-
-                store_data[i] = r.ReadLine();
-                if (store_data[i] == deletefield.Text)
+                string line;
+                int count = 0;
+                StreamReader r = new StreamReader(path);
+                while ((line = r.ReadLine()) != null)
                 {
-                    i--;
-                    for (int j = 0; j < 6; j++)
+                    count++;
+                }
+                r.Close();
+                r = new StreamReader(path);
+                string[] store_data = new String[count];
+                for (int i = 0; i < count; i++)
+                {
+
+                    store_data[i] = r.ReadLine();
+                    if (store_data[i] == deletefield.Text)
                     {
-                        line = r.ReadLine();
+                        i--;
+                        for (int j = 0; j < 6; j++)
+                        {
+                            line = r.ReadLine();
+                        }
                     }
                 }
-            }
-            r.Close();
-            using (StreamWriter write = new StreamWriter(fs.path))
-            {
-                for (int i = 0; i < store_data.Length; i++)
+                r.Close();
+                using (StreamWriter write = new StreamWriter(path))
                 {
-                    write.WriteLine(store_data[i]);
+                    for (int i = 0; i < store_data.Length; i++)
+                    {
+                        write.WriteLine(store_data[i]);
+                    }
                 }
+                MessageBox.Show("Record Deleted");
             }
+            else
+            {
+                MessageBox.Show("Textfeild is Empty");
+            }
+            
+        }
+
+        private void DeleteRecord_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            menu obj = new menu();
+            obj.Show();
+            this.Dispose();
         }
     }
 }

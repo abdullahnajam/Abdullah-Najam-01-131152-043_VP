@@ -6,7 +6,6 @@ c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Studen
 c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.csproj.GenerateResource.Cache
 c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.exe
 c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student Profile 2.0.pdb
-c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.FileSelect.resources
 c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.menu.resources
 c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.searchbyID.resources
 c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.searchbysem.resources
@@ -16,3 +15,4 @@ c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Studen
 c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.top3gpa.resources
 c:\users\ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.markattendence.resources
 C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\obj\Debug\Student_Profile_2._0.View_Attendence.resources
+C:\Users\Ultron\documents\visual studio 2015\Projects\Student Profile 2.0\Student Profile 2.0\bin\Debug\data.txt

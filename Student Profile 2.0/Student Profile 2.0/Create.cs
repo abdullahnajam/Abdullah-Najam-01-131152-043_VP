@@ -17,12 +17,12 @@ namespace Student_Profile_2._0
         {
             InitializeComponent();
         }
-        FileSelect fs = new FileSelect();
+        string path = "data.txt";
         private void createRecord_Click(object sender, EventArgs e)
         {
             try
             {
-                using (StreamWriter write = File.AppendText(fs.path))
+                using (StreamWriter write = File.AppendText(path))
                 {
                     write.WriteLine(idfield.Text);
                     write.WriteLine(namefield.Text);
@@ -37,9 +37,16 @@ namespace Student_Profile_2._0
             catch
             {
                 Console.WriteLine("File not found");
-                File.Create(fs.path);
+                File.Create(path);
             }
             
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            menu obj = new menu();
+            obj.Show();
+            this.Dispose();
         }
     }
 }

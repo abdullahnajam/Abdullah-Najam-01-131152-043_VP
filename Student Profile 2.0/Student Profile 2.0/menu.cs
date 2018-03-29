@@ -16,12 +16,13 @@ namespace Student_Profile_2._0
         {
             InitializeComponent();
         }
-
+        
         private void menu_Load(object sender, EventArgs e)
         {
             searchName.Hide();
             searchID.Hide();
             searchSem.Hide();
+            back.Hide();
         }
 
         private void searchStudent_Click(object sender, EventArgs e)
@@ -35,12 +36,14 @@ namespace Student_Profile_2._0
             markAttendence.Hide();
             top3.Hide();
             deleteButton.Hide();
+            back.Show();
 
         }
 
         private void searchName_Click(object sender, EventArgs e)
         {
             SearchNAme obj = new SearchNAme();
+            
             obj.Show();
             this.Hide();
         }
@@ -61,6 +64,7 @@ namespace Student_Profile_2._0
 
         private void createButton_Click(object sender, EventArgs e)
         {
+
             Create obj = new Create();
             obj.Show();
             this.Hide();
@@ -92,6 +96,20 @@ namespace Student_Profile_2._0
             View_Attendence obj = new View_Attendence();
             obj.Show();
             this.Hide();
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            searchName.Hide();
+            searchID.Hide();
+            searchSem.Hide();
+            searchStudent.Show();
+            createButton.Show();
+            viewAttendence.Show();
+            markAttendence.Show();
+            top3.Show();
+            deleteButton.Show();
+            back.Hide();
         }
     }
 }
