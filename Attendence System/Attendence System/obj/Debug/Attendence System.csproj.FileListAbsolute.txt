@@ -1,0 +1,20 @@
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Attendence System.exe.config
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Attendence System.exe
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Attendence System.pdb
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.CV.dll
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.CV.UI.dll
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.Util.dll
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\ZedGraph.dll
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.CV.xml
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.CV.UI.xml
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.Util.xml
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence System.csprojResolveAssemblyReference.cache
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence_System.Attendance.resources
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence_System.Login.resources
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence_System.Properties.Resources.resources
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence_System.Register.resources
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence System.csproj.GenerateResource.Cache
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence System.exe
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence System.pdb
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence_System.viewAdminPanel.resources
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence_System.viewAttendanceStudent.resources
