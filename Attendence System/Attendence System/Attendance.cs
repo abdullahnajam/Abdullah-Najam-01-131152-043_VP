@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Emgu.CV;
 using Emgu.Util;
 using Emgu.CV.Structure;
+using Emgu.CV.CvEnum;
 
 namespace Attendence_System
 {
@@ -23,9 +24,7 @@ namespace Attendence_System
         bool captureInProgress;
         private void Attendance_Load(object sender, EventArgs e)
         {
-            //Capture cap=new Capture();
-            //Image<Bgr, Byte> ImageFrame = cap.QueryFrame();
-
+            
             if (cap == null)
             {
                 try
@@ -53,7 +52,7 @@ namespace Attendence_System
 
                 captureInProgress = false;
             }
-            HaarCascade haars = new HaarCascade(Application.StartupPath + "/haarcascade_frontalface_alt_tree.xml");
+            
         }
 
         private void viewButton_Click(object sender, EventArgs e)
@@ -71,45 +70,26 @@ namespace Attendence_System
         }
         //bool captureInProgress;
         //Capture capture;
+        HaarCascade haars;
         private void cameraOn(object sender, EventArgs e)
         {
 
 
             Image<Bgr, Byte> ImageFrame = cap.QueryFrame();
             cameraCapture.Image = ImageFrame;
+            haars = new HaarCascade("C:\\Users\\Ultron\\Documents\\Visual Studio 2015\\Projects\\Abdullah-Najam-01-131152-043_VP\\Attendence System\\Attendence System\\haarcascade_frontalface_alt_tree.xml");
+            Image<Gray, byte> grayframe = ImageFrame.Convert<Gray, byte>();
+            var faces = grayframe.DetectHaarCascade(haars, 1.2, 3, HAAR_DETECTION_TYPE.DO_CANNY_PRUNING, new Size(25, 25))[0];
+            int TotalFaces = faces.Length;
+            
+            foreach (var face in faces)
+            {
+                ImageFrame.Draw(face.rect, new Bgr(Color.Red), 3);
+            }
+
+            cameraCapture.Image = ImageFrame;
         }
-        private void cameraCapture_Click(object sender, EventArgs e)
-        {
-            
-            
-            
-            //if (capture == null)
-            //{
-            //    try
-            //    {
-            //        capture = new Capture();
-            //    }
-            //    catch (NullReferenceException excpt)
-            //    {
-            //        MessageBox.Show(excpt.Message);
-            //    }
-            //}
-
-
-            //if (capture != null)
-            //{
-            //    if (captureInProgress)
-            //    {  
-                   
-            //        Application.Idle -= cameraOn;
-            //    }
-            //    else
-            //    {
-            //        Application.Idle += cameraOn;
-            //    }
-
-            //    captureInProgress = !captureInProgress;
-            //}
-        }
+       
     }
 }
+ 

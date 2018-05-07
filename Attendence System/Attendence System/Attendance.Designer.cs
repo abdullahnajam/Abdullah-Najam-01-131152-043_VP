@@ -63,7 +63,6 @@
             this.cameraCapture.Size = new System.Drawing.Size(397, 266);
             this.cameraCapture.TabIndex = 2;
             this.cameraCapture.TabStop = false;
-            this.cameraCapture.Click += new System.EventHandler(this.cameraCapture_Click);
             // 
             // viewButton
             // 
