@@ -41,6 +41,11 @@
             </summary>
             <returns>A copy of the first element in the storage. If the storage is empty, a default value will be returned</returns>
         </member>
+        <member name="P:Emgu.Util.BinaryFileStorage`1.FileName">
+            <summary>
+            The file name of the storage
+            </summary>
+        </member>
         <member name="M:Emgu.Util.BinaryFileStorage`1.EstimateSize">
             <summary>
             Estimate the number of elements in this storage as the size of the storage divided by the size of the elements
@@ -59,11 +64,6 @@
             Get the data in this storage
             </summary>
             <returns>The data in this storage</returns>
-        </member>
-        <member name="P:Emgu.Util.BinaryFileStorage`1.FileName">
-            <summary>
-            The file name of the storage
-            </summary>
         </member>
         <member name="T:Emgu.Util.DisposableObject">
             <summary>
@@ -168,6 +168,11 @@
             An object that can be interpolated
             </summary>
         </member>
+        <member name="P:Emgu.Util.IInterpolatable`1.InterpolationIndex">
+            <summary>
+            The index that will be used for interpolation
+            </summary>
+        </member>
         <member name="M:Emgu.Util.IInterpolatable`1.LinearInterpolate(`0,System.Double)">
             <summary>
             Interpolate base on this point and the other point with the given index
@@ -175,11 +180,6 @@
             <param name="other">The other point</param>
             <param name="index">The interpolation index</param>
             <returns>The interpolated point</returns>
-        </member>
-        <member name="P:Emgu.Util.IInterpolatable`1.InterpolationIndex">
-            <summary>
-            The index that will be used for interpolation
-            </summary>
         </member>
         <member name="T:Emgu.Util.PinnedArray`1">
             <summary>
@@ -199,6 +199,11 @@
             </summary>
             <returns>A pointer to the address of the the pinned array</returns>
         </member>
+        <member name="P:Emgu.Util.PinnedArray`1.Array">
+            <summary>
+            Get the array
+            </summary>
+        </member>
         <member name="M:Emgu.Util.PinnedArray`1.ReleaseManagedResources">
             <summary>
             Release the GCHandle
@@ -207,11 +212,6 @@
         <member name="M:Emgu.Util.PinnedArray`1.DisposeObject">
             <summary>
             Disposed the unmanaged data
-            </summary>
-        </member>
-        <member name="P:Emgu.Util.PinnedArray`1.Array">
-            <summary>
-            Get the array
             </summary>
         </member>
         <member name="T:Emgu.Util.Platform">
@@ -440,17 +440,17 @@
             A pointer to the unmanaged object
             </summary>
         </member>
+        <member name="P:Emgu.Util.UnmanagedObject.Ptr">
+            <summary>
+            Pointer to the unmanaged object
+            </summary>
+        </member>
         <member name="M:Emgu.Util.UnmanagedObject.op_Implicit(Emgu.Util.UnmanagedObject)~System.IntPtr">
             <summary>
             Implicit operator for IntPtr
             </summary>
             <param name="obj">The UnmanagedObject</param>
             <returns>The unmanaged pointer for this object</returns>
-        </member>
-        <member name="P:Emgu.Util.UnmanagedObject.Ptr">
-            <summary>
-            Pointer to the unmanaged object
-            </summary>
         </member>
     </members>
 </doc>

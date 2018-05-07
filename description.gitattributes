@@ -1,0 +1,4 @@
+Attendance via Facial Recognition
+
+Working:
+The software will be used to mark attendance of the students by scanning their faces using emgu cv a wrapper class for opencv. There will be three panels, one for student, one for teacher and one for admin. Admin can only allow the students to register to the software. When a student registers himself, he will be able to save his id (through facial Recognition) and that id will be later used to mark the attendance. This registered user will mark attendance by scanning their faces and clicking mark attendance.  Attendance will be only viewed by the teachers and admin. 

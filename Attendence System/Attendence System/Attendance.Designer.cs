@@ -39,7 +39,7 @@
             // 
             // markAttendance
             // 
-            this.markAttendance.Location = new System.Drawing.Point(123, 195);
+            this.markAttendance.Location = new System.Drawing.Point(171, 298);
             this.markAttendance.Name = "markAttendance";
             this.markAttendance.Size = new System.Drawing.Size(120, 37);
             this.markAttendance.TabIndex = 1;
@@ -48,7 +48,7 @@
             // 
             // registerFace
             // 
-            this.registerFace.Location = new System.Drawing.Point(123, 238);
+            this.registerFace.Location = new System.Drawing.Point(171, 341);
             this.registerFace.Name = "registerFace";
             this.registerFace.Size = new System.Drawing.Size(120, 32);
             this.registerFace.TabIndex = 2;
@@ -58,15 +58,16 @@
             // cameraCapture
             // 
             this.cameraCapture.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cameraCapture.Location = new System.Drawing.Point(98, 37);
+            this.cameraCapture.Location = new System.Drawing.Point(60, 12);
             this.cameraCapture.Name = "cameraCapture";
-            this.cameraCapture.Size = new System.Drawing.Size(179, 136);
+            this.cameraCapture.Size = new System.Drawing.Size(397, 266);
             this.cameraCapture.TabIndex = 2;
             this.cameraCapture.TabStop = false;
+            this.cameraCapture.Click += new System.EventHandler(this.cameraCapture_Click);
             // 
             // viewButton
             // 
-            this.viewButton.Location = new System.Drawing.Point(123, 276);
+            this.viewButton.Location = new System.Drawing.Point(171, 379);
             this.viewButton.Name = "viewButton";
             this.viewButton.Size = new System.Drawing.Size(120, 37);
             this.viewButton.TabIndex = 3;
@@ -76,7 +77,7 @@
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(325, 309);
+            this.back.Location = new System.Drawing.Point(373, 412);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(75, 23);
             this.back.TabIndex = 4;
@@ -88,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 344);
+            this.ClientSize = new System.Drawing.Size(529, 451);
             this.Controls.Add(this.back);
             this.Controls.Add(this.viewButton);
             this.Controls.Add(this.cameraCapture);
