@@ -25,6 +25,8 @@ namespace Attendence_System
         bool captureInProgress;
         private void Attendance_Load(object sender, EventArgs e)
         {
+            database db = new database();
+            label1.Text=db.connect();
             
             if (cap == null)
             {
@@ -102,6 +104,8 @@ namespace Attendence_System
         private void markAttendance_Click(object sender, EventArgs e)
         {
             getfaceImage.Image = saveIamge;
+            database db = new database();
+            db.storedata(3, "now", getfaceImage.Image);
         }
     }
 }

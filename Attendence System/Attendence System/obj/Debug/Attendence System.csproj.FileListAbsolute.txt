@@ -21,3 +21,8 @@ C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-0
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.CV.pdb
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.Util.pdb
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\haarcascade_frontalface_alt_tree.xml
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\MySql.Data.dll
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\MySql.Data.xml
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\MySql.Web.dll
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\MySql.Web.xml
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\MySql.Data.Entity.dll
