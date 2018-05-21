@@ -14,7 +14,7 @@ namespace Attendence_System
         DataTable Localdb = new DataTable();
         int rowpos = 0;
         int rownum = 0;
-        public Bitmap connect()
+        public Bitmap connect(int sid,string name)
         {
             
             
@@ -28,10 +28,12 @@ namespace Attendence_System
                 //Byte[] convertTobyte = ms.ToArray();
                 connection.Open();
                 Bitmap bmp=null;
-                OleDbCommand command = new OleDbCommand("SELECT * from  faces", connection);
+                OleDbCommand command = new OleDbCommand("SELECT * from  faces Where faceID=@fid and facename=@name", connection);
+                command.Parameters.AddWithValue("@fid", sid);
+                command.Parameters.AddWithValue("@name", name);
                 using (OleDbDataReader reader = command.ExecuteReader())
                 {
-                    if (reader.Read())
+                    while (reader.Read())
                     {
                         string st = reader[2].ToString();
                         byte[] picData = reader[2] as byte[] ?? null;
@@ -70,22 +72,23 @@ namespace Attendence_System
 
             }
         }
-    
-        public void storeStudent(int id,string name,Image img)
+        public void storeStudent(int id,string name,int sem,string dept)
         {
             using (OleDbConnection connection = new OleDbConnection(connstring))
             {
-                
+
                 connection.Open();
                 OleDbDataReader reader = null;
-                OleDbCommand command = new OleDbCommand("insert into student(ID,sname,face) values(@id,@name,@face)", connection);
+                OleDbCommand command = new OleDbCommand("insert into student(ID,sname,sem,dept) values(@id,@name,@s,@d)", connection);
                 command.Parameters.AddWithValue("@id", id);
                 command.Parameters.AddWithValue("@name", name);
-                command.Parameters.AddWithValue("@face", img);
+                command.Parameters.AddWithValue("@s", sem);
+                command.Parameters.AddWithValue("@d", dept);
                 reader = command.ExecuteReader();
-                
+
             }
         }
+       
         public void storeFace(int id, string name, Bitmap convert)
         {
             using (OleDbConnection connection = new OleDbConnection(connstring))
@@ -105,7 +108,7 @@ namespace Attendence_System
 
             }
         }
-        
+       
 
     }
 }

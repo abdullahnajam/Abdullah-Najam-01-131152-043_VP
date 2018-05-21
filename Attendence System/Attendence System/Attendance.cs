@@ -27,6 +27,8 @@ namespace Attendence_System
             studentName = stdname;
         }
         Capture cap;
+        int sem = 0;
+        string dept = null;
         bool captureInProgress;
         public void azure()
         {
@@ -114,6 +116,7 @@ namespace Attendence_System
 
         private void trainFaceBtn_Click(object sender, EventArgs e)
         {
+            getfaceImage.Image = null;
             getfaceImage.Image = saveIamge;
             database db = new database();
             db.storeFace(int.Parse(studentID), studentName,saveIamge);
@@ -123,14 +126,47 @@ namespace Attendence_System
         {
 
             database db = new database();
-            pictureBox1.Image=db.connect();
+           // if (pictureBox1.Image == null)
+                pictureBox1.Image = db.connect(int.Parse(studentID), studentName);
+            if (pictureBox1.Image == getfaceImage.Image || pictureBox1.Image == cameraCapture.Image)
+                MessageBox.Show("Match");
+            //else
+              //  MessageBox.Show("face already retrived");
         }
 
         private void markAttendance_Click(object sender, EventArgs e)
         {
             getfaceImage.Image = saveIamge;
             database db = new database();
-            db.storeStudent(3, "now", getfaceImage.Image);
+            using (OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = E:\\db.accdb"))
+            {
+                con.Open();
+                OleDbCommand command = new OleDbCommand("SELECT * from  student where ID=@fid and sname=@name", con);
+                command.Parameters.AddWithValue("@fid", studentID);
+                command.Parameters.AddWithValue("@name", studentName);
+                using (OleDbDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        sem=int.Parse(reader[2].ToString());
+                        dept = reader[3].ToString();
+                    }
+                }
+
+                string date = DateTime.Today.ToString("MM/dd/yyyy");
+                command = new OleDbCommand("insert into Attendance(ID,stdname,semester,department,dates,attendance) values(@id,@name,@s,@dept,@date,@att)", con);
+                command.Parameters.AddWithValue("@id", studentID);
+                command.Parameters.AddWithValue("@name", studentName);
+                command.Parameters.AddWithValue("@s", sem);
+                command.Parameters.AddWithValue("@dept", dept);
+                command.Parameters.AddWithValue("@date", date);
+                command.Parameters.AddWithValue("@att", "Yes");
+                OleDbDataReader readers = command.ExecuteReader();
+                MessageBox.Show("Attendance Marked");
+
+
+            }
+            //db.store(3, "now", getfaceImage.Image);
         }
         public void retriveface(string id,string name)
         {

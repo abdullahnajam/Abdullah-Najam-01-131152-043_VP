@@ -27,18 +27,27 @@ namespace Attendence_System
         private void loginButton_Click(object sender, EventArgs e)
         {
             string id = idField.Text;string n = usernameField.Text;
-            if(status.Text=="Student")
+            if(idField.Text!="" && usernameField.Text!="")
             {
-                Attendance obj = new Attendance(id,n);
-                obj.Show();
-                this.Hide();
+                if (status.Text == "Student")
+                {
+                    Attendance obj = new Attendance(id, n);
+                    obj.Show();
+                    this.Hide();
+                }
+                else if (status.Text == "Admin")
+                {
+                    viewAttendanceStudent obj = new viewAttendanceStudent();
+                    obj.Show();
+                    this.Hide();
+                }
             }
-            else if (status.Text == "Admin")
-            {
-                viewAdminPanel obj = new viewAdminPanel();
-                obj.Show();
-                this.Hide();
-            }
+            
+
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
 
         }
     }

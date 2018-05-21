@@ -16,7 +16,6 @@ C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-0
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence System.csproj.GenerateResource.Cache
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence System.exe
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence System.pdb
-C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence_System.viewAdminPanel.resources
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\obj\Debug\Attendence_System.viewAttendanceStudent.resources
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.CV.pdb
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Emgu.Util.pdb

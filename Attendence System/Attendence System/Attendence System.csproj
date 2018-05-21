@@ -84,6 +84,11 @@
     <Compile Include="Attendance.Designer.cs">
       <DependentUpon>Attendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="attendencesystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>attendencesystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="database.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -98,12 +103,6 @@
     </Compile>
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
-    </Compile>
-    <Compile Include="viewAdminPanel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="viewAdminPanel.Designer.cs">
-      <DependentUpon>viewAdminPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="viewAttendanceStudent.cs">
       <SubType>Form</SubType>
@@ -129,12 +128,20 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="viewAdminPanel.resx">
-      <DependentUpon>viewAdminPanel.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="viewAttendanceStudent.resx">
       <DependentUpon>viewAttendanceStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="attendencesystemDataSet.xsc">
+      <DependentUpon>attendencesystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="attendencesystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>attendencesystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="attendencesystemDataSet.xss">
+      <DependentUpon>attendencesystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

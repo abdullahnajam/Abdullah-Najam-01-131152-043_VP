@@ -19,11 +19,12 @@ namespace Attendence_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(rbadmin.Checked)
+            database db = new database();
+            if (rbadmin.Checked)
             {
                 if(usernameField.Text!=""&& passField.Text != "")
                 {
-                    database db = new database();
+                    
                     db.storeAdmin(usernameField.Text,passField.Text);
                     Login obj = new Login();
                     obj.Show();
@@ -34,6 +35,7 @@ namespace Attendence_System
             {
                 if (usernameField.Text != "" && passField.Text != ""&& semtextBox.Text!="" && depttextBox.Text != "")
                 {
+                    db.storeStudent(int.Parse(passField.Text), usernameField.Text, int.Parse(semtextBox.Text), depttextBox.Text);
                     Login obj = new Login();
                     obj.Show();
                     this.Hide();
