@@ -19,9 +19,27 @@ namespace Attendence_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Login obj = new Login();
-            obj.Show();
-            this.Hide();
+            if(rbadmin.Checked)
+            {
+                if(usernameField.Text!=""&& passField.Text != "")
+                {
+                    database db = new database();
+                    db.storeAdmin(usernameField.Text,passField.Text);
+                    Login obj = new Login();
+                    obj.Show();
+                    this.Hide();
+                }
+            }
+            else if (rbstudent.Checked)
+            {
+                if (usernameField.Text != "" && passField.Text != ""&& semtextBox.Text!="" && depttextBox.Text != "")
+                {
+                    Login obj = new Login();
+                    obj.Show();
+                    this.Hide();
+                }
+            }
+
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -29,6 +47,22 @@ namespace Attendence_System
             Login obj = new Login();
             obj.Show();
             this.Hide();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+            if(rbadmin.Checked)
+            {
+                semlabel.Hide();
+                semtextBox.Hide();
+                deptlabel.Hide();
+                depttextBox.Hide();
+            }
         }
     }
 }

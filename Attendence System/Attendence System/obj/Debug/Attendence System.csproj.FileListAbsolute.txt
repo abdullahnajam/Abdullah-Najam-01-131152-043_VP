@@ -26,3 +26,7 @@ C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-0
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\MySql.Web.dll
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\MySql.Web.xml
 C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\MySql.Data.Entity.dll
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Database1.mdf
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Database1_log.ldf
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Ultron\Documents\Visual Studio 2015\Projects\Abdullah-Najam-01-131152-043_VP\Attendence System\Attendence System\bin\Debug\Newtonsoft.Json.xml

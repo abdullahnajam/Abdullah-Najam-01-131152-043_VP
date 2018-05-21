@@ -26,9 +26,10 @@ namespace Attendence_System
 
         private void loginButton_Click(object sender, EventArgs e)
         {
+            string id = idField.Text;string n = usernameField.Text;
             if(status.Text=="Student")
             {
-                Attendance obj = new Attendance();
+                Attendance obj = new Attendance(id,n);
                 obj.Show();
                 this.Hide();
             }

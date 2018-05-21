@@ -30,16 +30,16 @@
         {
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.idField = new System.Windows.Forms.TextBox();
+            this.passField = new System.Windows.Forms.TextBox();
             this.usernameField = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.deptlabel = new System.Windows.Forms.Label();
+            this.semlabel = new System.Windows.Forms.Label();
+            this.depttextBox = new System.Windows.Forms.TextBox();
+            this.semtextBox = new System.Windows.Forms.TextBox();
+            this.registerButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbstudent = new System.Windows.Forms.RadioButton();
+            this.rbadmin = new System.Windows.Forms.RadioButton();
             this.back = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -47,11 +47,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 61);
+            this.label2.Location = new System.Drawing.Point(36, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 13);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 9;
-            this.label2.Text = "ID";
+            this.label2.Text = "Password";
             // 
             // label1
             // 
@@ -62,12 +62,12 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Username";
             // 
-            // idField
+            // passField
             // 
-            this.idField.Location = new System.Drawing.Point(107, 58);
-            this.idField.Name = "idField";
-            this.idField.Size = new System.Drawing.Size(137, 20);
-            this.idField.TabIndex = 7;
+            this.passField.Location = new System.Drawing.Point(107, 58);
+            this.passField.Name = "passField";
+            this.passField.Size = new System.Drawing.Size(137, 20);
+            this.passField.TabIndex = 7;
             // 
             // usernameField
             // 
@@ -76,84 +76,85 @@
             this.usernameField.Size = new System.Drawing.Size(137, 20);
             this.usernameField.TabIndex = 6;
             // 
-            // label3
+            // deptlabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Department";
+            this.deptlabel.AutoSize = true;
+            this.deptlabel.Location = new System.Drawing.Point(34, 159);
+            this.deptlabel.Name = "deptlabel";
+            this.deptlabel.Size = new System.Drawing.Size(62, 13);
+            this.deptlabel.TabIndex = 13;
+            this.deptlabel.Text = "Department";
             // 
-            // label4
+            // semlabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 133);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Semester";
+            this.semlabel.AutoSize = true;
+            this.semlabel.Location = new System.Drawing.Point(34, 133);
+            this.semlabel.Name = "semlabel";
+            this.semlabel.Size = new System.Drawing.Size(51, 13);
+            this.semlabel.TabIndex = 12;
+            this.semlabel.Text = "Semester";
             // 
-            // textBox1
+            // depttextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 156);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 11;
+            this.depttextBox.Location = new System.Drawing.Point(107, 156);
+            this.depttextBox.Name = "depttextBox";
+            this.depttextBox.Size = new System.Drawing.Size(137, 20);
+            this.depttextBox.TabIndex = 11;
             // 
-            // textBox2
+            // semtextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(137, 20);
-            this.textBox2.TabIndex = 10;
+            this.semtextBox.Location = new System.Drawing.Point(107, 130);
+            this.semtextBox.Name = "semtextBox";
+            this.semtextBox.Size = new System.Drawing.Size(137, 20);
+            this.semtextBox.TabIndex = 10;
             // 
-            // button1
+            // registerButton
             // 
-            this.button1.Location = new System.Drawing.Point(54, 195);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 54);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Register";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.registerButton.Location = new System.Drawing.Point(37, 219);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(112, 54);
+            this.registerButton.TabIndex = 14;
+            this.registerButton.Text = "Register";
+            this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbstudent);
+            this.groupBox1.Controls.Add(this.rbadmin);
             this.groupBox1.Location = new System.Drawing.Point(37, 84);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(207, 40);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Status";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // radioButton1
+            // rbstudent
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(17, 16);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Admin";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbstudent.AutoSize = true;
+            this.rbstudent.Location = new System.Drawing.Point(124, 16);
+            this.rbstudent.Name = "rbstudent";
+            this.rbstudent.Size = new System.Drawing.Size(62, 17);
+            this.rbstudent.TabIndex = 1;
+            this.rbstudent.TabStop = true;
+            this.rbstudent.Text = "Student";
+            this.rbstudent.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbadmin
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(124, 16);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(62, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Student";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbadmin.AutoSize = true;
+            this.rbadmin.Location = new System.Drawing.Point(17, 16);
+            this.rbadmin.Name = "rbadmin";
+            this.rbadmin.Size = new System.Drawing.Size(54, 17);
+            this.rbadmin.TabIndex = 0;
+            this.rbadmin.TabStop = true;
+            this.rbadmin.Text = "Admin";
+            this.rbadmin.UseVisualStyleBackColor = true;
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(197, 226);
+            this.back.Location = new System.Drawing.Point(180, 250);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(75, 23);
             this.back.TabIndex = 16;
@@ -165,20 +166,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(295, 285);
             this.Controls.Add(this.back);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.registerButton);
+            this.Controls.Add(this.deptlabel);
+            this.Controls.Add(this.semlabel);
+            this.Controls.Add(this.depttextBox);
+            this.Controls.Add(this.semtextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.idField);
+            this.Controls.Add(this.passField);
             this.Controls.Add(this.usernameField);
             this.Name = "Register";
             this.Text = "Register";
+            this.Load += new System.EventHandler(this.Register_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -190,16 +192,16 @@
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox idField;
+        private System.Windows.Forms.TextBox passField;
         private System.Windows.Forms.TextBox usernameField;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label deptlabel;
+        private System.Windows.Forms.Label semlabel;
+        private System.Windows.Forms.TextBox depttextBox;
+        private System.Windows.Forms.TextBox semtextBox;
+        private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbstudent;
+        private System.Windows.Forms.RadioButton rbadmin;
         private System.Windows.Forms.Button back;
     }
 }

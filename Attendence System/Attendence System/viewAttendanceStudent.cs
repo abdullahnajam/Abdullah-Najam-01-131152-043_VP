@@ -19,9 +19,9 @@ namespace Attendence_System
 
         private void back_Click(object sender, EventArgs e)
         {
-            Attendance obj = new Attendance();
-            obj.Show();
-            this.Hide();
+            //Attendance obj = new Attendance();
+            //obj.Show();
+            //this.Hide();
         }
     }
 }
