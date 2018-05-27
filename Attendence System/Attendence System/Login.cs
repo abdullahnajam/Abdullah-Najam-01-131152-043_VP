@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -31,15 +32,47 @@ namespace Attendence_System
             {
                 if (status.Text == "Student")
                 {
-                    Attendance obj = new Attendance(id, n);
-                    obj.Show();
-                    this.Hide();
+                    using (OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = E:\\db.accdb"))
+                    {
+                        con.Open();
+                        OleDbCommand command = new OleDbCommand("SELECT * from  student where ID=@fid and sname=@name", con);
+                        command.Parameters.AddWithValue("@fid", int.Parse(idField.Text));
+                        command.Parameters.AddWithValue("@name", usernameField.Text);
+                        using (OleDbDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                Attendance obj = new Attendance(id, n);
+                                obj.Show();
+                                this.Hide();
+                            }
+                            else
+                                MessageBox.Show("User not found. Please register.");
+                        }
+                    }
+                    
                 }
                 else if (status.Text == "Admin")
                 {
-                    viewAttendanceStudent obj = new viewAttendanceStudent();
-                    obj.Show();
-                    this.Hide();
+                    using (OleDbConnection con = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = E:\\db.accdb"))
+                    {
+                        con.Open();
+                        OleDbCommand command = new OleDbCommand("SELECT * from  admin where password=@fid and username=@name", con);
+                        command.Parameters.AddWithValue("@fid", int.Parse(idField.Text));
+                        command.Parameters.AddWithValue("@name", usernameField.Text);
+                        using (OleDbDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                viewAttendanceStudent obj = new viewAttendanceStudent();
+                                obj.Show();
+                                this.Hide();
+                            }
+                            else
+                                MessageBox.Show("User not found. Please register.");
+                        }
+                    }
+                    
                 }
             }
             

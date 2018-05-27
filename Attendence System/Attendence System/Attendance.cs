@@ -70,12 +70,7 @@ namespace Attendence_System
             
         }
 
-        private void viewButton_Click(object sender, EventArgs e)
-        {
-            viewAttendanceStudent obj = new viewAttendanceStudent();
-            obj.Show();
-            this.Hide();
-        }
+        
 
         private void back_Click(object sender, EventArgs e)
         {
@@ -112,6 +107,7 @@ namespace Attendence_System
             }
             
             cameraCapture.Image = ImageFrame;
+            
         }
 
         private void trainFaceBtn_Click(object sender, EventArgs e)
@@ -127,7 +123,7 @@ namespace Attendence_System
 
             database db = new database();
            // if (pictureBox1.Image == null)
-                pictureBox1.Image = db.connect(int.Parse(studentID), studentName);
+                pictureBox1.Image = db.loadFace(int.Parse(studentID), studentName);
             if (pictureBox1.Image == getfaceImage.Image || pictureBox1.Image == cameraCapture.Image)
                 MessageBox.Show("Match");
             //else
@@ -168,7 +164,45 @@ namespace Attendence_System
             }
             //db.store(3, "now", getfaceImage.Image);
         }
-        public void retriveface(string id,string name)
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (OleDbConnection connection = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source = E:\\db.accdb"))
+            {
+
+                //Image im=null;
+                Bitmap convert = new Bitmap(saveIamge);
+                MemoryStream mstream = new MemoryStream();
+                convert.Save(mstream, System.Drawing.Imaging.ImageFormat.Jpeg);
+                Byte[] convertTobyte = mstream.ToArray();
+                connection.Open();
+                Bitmap bmp = null;
+                OleDbCommand command = new OleDbCommand("SELECT * from  faces Where faceID=@fid and facename=@name", connection);
+                command.Parameters.AddWithValue("@fid", studentID);
+                command.Parameters.AddWithValue("@name", studentName);
+                using (OleDbDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        string st = reader[2].ToString();
+                        byte[] picData = reader[2] as byte[] ?? null;
+
+                        if (picData != null)
+                        {
+                            
+                            if (picData == convertTobyte)
+                                MessageBox.Show("recognized");
+                            else
+                                MessageBox.Show("not recognized");
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        public void retriveface()
         {
             string connstring = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = E:\\db.accdb";
             OleDbDataAdapter dataAdapter;
@@ -181,15 +215,25 @@ namespace Attendence_System
                 MemoryStream stream;
                 
                 connection.Open();
-
+                byte[] retriveImg=null;
+                byte[] collectImage = null;
                 Image readed = null;
                 // where faceID='" + id + "' and facename='" + name + "'
-                dataAdapter = new OleDbDataAdapter("SELECT * from  faces", connection);
+                dataAdapter = new OleDbDataAdapter("SELECT * from  faces where faceID='" + studentID + "' and facename='" + studentName + "'", connection);
+                
                 dataAdapter.Fill(Localdb);
-                byte[] retriveImg = (byte[])Localdb.Rows[rownum]["face"];
+                //DataRow[] rows = Localdb.Select();
+                //byte[] stringArray = rows.Select(row => row["face"]).ToArray();
+                while(rownum<=2)
+                {
+                    retriveImg = (byte[])Localdb.Rows[rownum]["face"];
+                }
                 stream = new MemoryStream(retriveImg);
                 readed = Image.FromStream(stream);
+                List<Image<Gray, byte>> trainingImages = new List<Image<Gray, byte>>();
                 Bitmap bp = new Bitmap(readed);
+                //trainingImages.Add(bp);
+
                 pictureBox1.Image = bp;
                 while (Localdb.Rows.Count <= rownum)
                 {

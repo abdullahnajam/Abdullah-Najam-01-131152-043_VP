@@ -14,7 +14,7 @@ namespace Attendence_System
         DataTable Localdb = new DataTable();
         int rowpos = 0;
         int rownum = 0;
-        public Bitmap connect(int sid,string name)
+        public Bitmap loadFace(int sid,string name)
         {
             
             
